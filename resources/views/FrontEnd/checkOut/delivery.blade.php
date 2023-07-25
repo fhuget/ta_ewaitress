@@ -15,13 +15,13 @@ Pengantaran
           <input type="text" name="name" value="{{ $customer->name }}">
         </div>
         <div class="inputBox">
-        <input type="text" name="email" value="{{ $customer->email }}">
+        <input type="email" name="email" value="{{ $customer->email }}">
         </div>
         <div class="inputBox">
-        <input type="text" id="adr" name="phone_no" value="{{ $customer->phone_no }}">
+        <input type="number" id="adr" name="phone_no" value="{{ $customer->phone_no }}">
         </div>
         <div class="inputBox">
-        <input type="text" name="nomeja" placeholder="Masukkan No.Meja" required="">
+        <input type="number" name="nomeja" placeholder="Masukkan No.Meja" required="">
         </div>
         <div class="inputBox">
           <input type="submit" value="Submit" >

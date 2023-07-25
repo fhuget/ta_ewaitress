@@ -33,6 +33,10 @@ Category Page
 	    					<label>Kode Kategori</label>
 	    					<input type="number" class="form-control" name="order_number">
   						</div>
+						  <!-- <div class="form-group">
+	    					<label>Ditambahkan Pada</label>
+	    					<input type="date" class="form-control" name="added_on">
+  						</div> -->
   						<div class="form-group">
 	    					<label>Status Kategori</label>
 	    					<div class="radio">

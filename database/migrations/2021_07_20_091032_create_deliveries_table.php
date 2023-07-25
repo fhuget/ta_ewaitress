@@ -16,9 +16,9 @@ class CreateDeliveriesTable extends Migration
         Schema::create('deliveries', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('email')->unique();
-            $table->string('phone_no')->unique();
-            $table->string('nomeja');
+            $table->string('email');
+            $table->string('phone_no');
+            $table->string('nomeja')->unique();
             $table->timestamps();
         });
     }

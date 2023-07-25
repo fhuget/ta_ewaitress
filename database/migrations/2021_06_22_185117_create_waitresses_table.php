@@ -16,8 +16,6 @@ class CreateWaitressesTable extends Migration
         Schema::create('waitresses', function (Blueprint $table) {
             $table->bigIncrements('waitress_id');
             $table->string('waitress_name');
-            $table->string('waitress_code');
-            $table->string('waitress_password');
             $table->integer('waitress_status');
             $table->datetime('added_on');
             $table->timestamps();

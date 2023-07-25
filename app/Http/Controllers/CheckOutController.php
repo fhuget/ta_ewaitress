@@ -9,7 +9,8 @@ use Session;
 use App\Models\Foodmenu;
 use App\Models\Order;
 use App\Models\OrderDetail;
-use App\Models\payment;
+use App\Models\Payment;
+use App\Models\Customer;
 
 
 class CheckOutController extends Controller

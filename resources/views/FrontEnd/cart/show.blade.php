@@ -14,11 +14,11 @@ List Pesanan
   <thead>
     <tr>
       <th scope="col">No</th>
-      <th scope="col">Hapus</th>
       <th scope="col" class="text-success">Nama Barang</th>
       <th scope="col">Gambar Barang</th>
       <th scope="col">Harga Barang</th>
       <th scope="col">Jumlah Barang</th>
+      <th scope="col">Hapus</th>
       <th scope="col">Total </th>
       <th scope="col">Total Semua</th>
     </tr>
@@ -30,10 +30,7 @@ List Pesanan
   @foreach($CartFood as $food)
     <tr>
       <th scope="row">{{ $i++ }}</th>
-      <th scope="row">
-        <a href="{{ route('remove_item', ['rowId' => $food->rowId]) }}" type="button" class="btn btn-danger">
-          <span aria-hidden="true">Delete</span>
-      </th>
+
       <td>{{ $food->name }}</td>
       <td><img src="{{ asset($food->options->image) }}" style="height: 50px; width: 50px; border-radius: 50%;" class="center"></td>
       <td>Rp. {{ $food->price }}</td>
@@ -47,8 +44,15 @@ List Pesanan
        </form>
      </td>
 
+     <th scope="row">
+        <a href="{{ route('remove_item', ['rowId' => $food->rowId]) }}" type="button" class="btn btn-danger">
+          <span aria-hidden="true">Delete</span>
+      </th>
+
       <td>Rp. {{ $subtotal=$food->price*$food->qty }}</td>
       <input type="hidden" value="{{ $sum = $sum + $subtotal }}">
+      </td>
+
     </tr>
 
     @endforeach
@@ -75,23 +79,24 @@ List Pesanan
 
 @if(Session::get('customer_id', 'delivery_id'))
 <div class="col-md-9">
-  <a href="{{ url('/checkout/payment') }}" class="btn btn-info" style="float: right">
+  <a href="{{ url('/delivery') }}" class="btn btn-info" style="float: right">
+  <!-- /checkout/payment -->
     <i class="fa fa-shopping-bag"></i>
-    Lanjutkan Pembayaran
+    Lanjutkan
   </a>
 </div>
 @elseif(Session::get('customer_id'))
 <div class="col-md-9">
   <a href="{{ url('/delivery') }}" class="btn btn-info" style="float: right">
     <i class="fa fa-shopping-bag"></i>
-    Lanjutkan Pembayaran
+    Lanjutkan
   </a>
 </div>
 @else
 <div class="col-md-9">
-  <a href="{{ route('check_out') }}" class="btn btn-info" style="float: right">
+  <a href="{{ route('/delivery') }}" class="btn btn-info" style="float: right">
     <i class="fa fa-shopping-bag"></i>
-    Lanjutkan Pembayaran
+    Lanjutkan
   </a>
 </div>
 @endif

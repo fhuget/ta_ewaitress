@@ -28,7 +28,7 @@ class CustomerController extends Controller
         Session::put('customer_id',$customer_id);
         Session::put('customer_name',$customer->name);
 
-        return redirect('/delivery');
+        return redirect('http://localhost:8000');
     }
     public function regis ()
     {
@@ -49,7 +49,7 @@ class CustomerController extends Controller
         Session::put('customer_id', $customer->customer_id);
         Session::put('customer_name', $customer->name);
 
-        return redirect('/delivery');
+        return redirect('http://localhost:8000');
       }
 
     else
@@ -87,6 +87,7 @@ class CustomerController extends Controller
       Session::put('delivery_id', $delivery->id);
 
       return redirect()->route('checkout_payment');
+      // checkout_payment
     }
 
     public function del_list()

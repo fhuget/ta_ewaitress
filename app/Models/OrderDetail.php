@@ -9,5 +9,12 @@ class OrderDetail extends Model
 {
     use HasFactory;
 
-        protected $primaryKey = 'id';
+    protected $primaryKey = 'id';
+
+    protected $guarded = [];
+
+    public function order()
+    {
+        return $this->belongsTo(Order::class, 'order_id');
+    }
 }

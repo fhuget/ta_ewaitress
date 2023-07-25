@@ -77,21 +77,21 @@ List Pesanan
 <div class="col-md-9">
   <a href="{{ url('/checkout/payment') }}" class="btn btn-info" style="float: right">
     <i class="fa fa-shopping-bag"></i>
-    Lanjutkan Pembayaran
+    Lanjutkan
   </a>
 </div>
 @elseif(Session::get('customer_id'))
 <div class="col-md-9">
-  <a href="{{ url('/delivery') }}" class="btn btn-info" style="float: right">
+  <a href="{{ url('/checkout/payment') }}" class="btn btn-info" style="float: right">
     <i class="fa fa-shopping-bag"></i>
-    Lanjutkan Pembayaran
+    Lanjutkan
   </a>
 </div>
 @else
 <div class="col-md-9">
   <a href="{{ route('check_out') }}" class="btn btn-info" style="float: right">
     <i class="fa fa-shopping-bag"></i>
-    Lanjutkan Pembayaran
+    Lanjutkan
   </a>
 </div>
 @endif

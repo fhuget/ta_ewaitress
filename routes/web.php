@@ -48,6 +48,15 @@ Route::get('/order/delete/{order_id}',[App\Http\Controllers\OrderController::cla
 Route::get('/order/invoice/{order_id}',[App\Http\Controllers\OrderController::class,'viewInvoice'])->name('view_order_invoice');
 Route::get('/order/invoice/print/{order_id}',[App\Http\Controllers\OrderController::class,'printInvoice'])->name('print_invoice');
 Route::get('/order/view/{order_id}',[App\Http\Controllers\OrderController::class,'viewOrder'])->name('view_order');
+
+Route::get('/order/approved/{order_id}',[App\Http\Controllers\OrderController::class,'approved'])->name('approved_order');
+Route::get('/order/disapproved/{order_id}',[App\Http\Controllers\OrderController::class,'disapproved'])->name('disapproved_order');
+
+Route::get('/order/approvedPay/{order_id}',[App\Http\Controllers\OrderController::class,'approvedPayment'])->name('approved_payment');
+Route::get('/order/disapprovedPay/{order_id}',[App\Http\Controllers\OrderController::class,'disapprovedPayment'])->name('disapproved_payment');
+
+// Route::post('/order/update/',[App\Http\Controllers\OrderController::class,'update'])->name('update_order');
+
 /*====================Order End Here====================*/
 
 /*====================customer Start Here====================*/

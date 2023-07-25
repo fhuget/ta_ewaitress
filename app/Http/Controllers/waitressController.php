@@ -60,7 +60,6 @@ class waitressController extends Controller
     {
        $waitress = Waitress::find($request->waitress_id);
        $waitress->waitress_name = $request->waitress_name;
-       $waitress->waitress_code = $request->waitress_code;
        $waitress->save();
 
        return redirect('/waitress/manage')->with('sms','waitress updated');

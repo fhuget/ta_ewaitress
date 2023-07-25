@@ -16,10 +16,10 @@ Register Pelanggan
           <input type="text" name="name" placeholder="Masukkan Nama" required="">
         </div>
         <div class="inputBox">
-        <input type="text" name="email" placeholder="Masukkan Email" required="">
+        <input type="email" name="email" placeholder="Masukkan Email" required="">
         </div>
         <div class="inputBox">
-        <input type="text" name="phone_no" placeholder="Masukkan Nomor Telepon" required="">
+        <input type="number" name="phone_no" placeholder="Masukkan Nomor Telepon" required="">
         </div>
         <div class="inputBox">
         <input type="password" name="password" placeholder="Masukkan Password" required="">

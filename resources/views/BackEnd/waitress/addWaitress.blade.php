@@ -30,15 +30,6 @@ Waitress Page
 	    					<input type="text" class="form-control" name="waitress_name">
   						</div>
   						<div class="form-group">
-	    					<label>No. Telepon</label>
-	    					<input type="number" class="form-control" name="waitress_code">
-  						</div>
-  						<div class="form-group">
-	    					<label>Password Pegawai</label>
-	    					<input type="password" class="form-control" name="waitress_password">
-  						</div>
-
-  						<div class="form-group">
 	    					<label>Status Pegawai</label>
 	    					<div class="radio">
 	    						<input type="radio" name="waitress_status" value="1">Aktif

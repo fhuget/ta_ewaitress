@@ -134,14 +134,16 @@ View || Invoice
 
                                          <tbody>
                                            @php($i = 1)
+                                           @foreach($order_details as $orderD)
                                                 <tr>
                                                  <td>{{ $i++ }}</td>
-                                                 <td>{{ $order_detail->foodmenu_id }}</td>
-                                                 <td>{{ $order_detail->foodmenu_name }}</td>
-                                                 <td>Rp. {{ $order_detail->foodmenu_price }}</td>
-                                                 <td>{{ $order_detail->foodmenu_qty }}</td>
-                                                 <td>Rp. {{ $order_detail->foodmenu_price * $order_detail->foodmenu_qty }}</td>
+                                                 <td>{{ $orderD->order_id }}</td>
+                                                 <td>{{ $orderD->foodmenu_name }}</td>
+                                                 <td>Rp. {{ $orderD->foodmenu_price }}</td>
+                                                 <td>{{ $orderD->foodmenu_qty }}</td>
+                                                 <td>Rp. {{ $orderD->foodmenu_price * $orderD->foodmenu_qty }}</td>
                                                 </tr>
+                                            @endforeach
                                          </tbody>
 
                                        </table>

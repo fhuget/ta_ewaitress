@@ -46,6 +46,12 @@ Food Menu Page
 	    					<label>Gambar</label>
 	    					<input type="file" class="form-control" name="foodmenu_image">
   						</div>
+
+						  <div class="form-group">
+									  <label>Harga Barang</label>
+  										<input type="text" class="form-control" name="full_price" placeholder="Masukkan Harga" required>
+  							</div>
+
   						<div class="form-group">
 	    					<label>Status Barang</label>
 	    					<div class="radio">
@@ -54,19 +60,7 @@ Food Menu Page
 	    					</div>
   						</div>
 
-  						<div class="card">
-  							<div class="card-header">Food Menu Attribute</div>
-  							<div class="card-body">
-  								<div class="form-group">
-  									<div class="row">
-  										<div class="col-md-6">
-  											<input type="text" class="form-control" name="full_price" placeholder="Enter Price" required>
-  										</div>
-  									</div>
-  								</div>
-  							</div>
-  						</div>
-
+  						
   						<button type="submit" name="btn" class="btn btn-outline-primary btn-block">Add Food Menu</button>
 
 					</form>

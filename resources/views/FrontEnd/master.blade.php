@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cafe Shelterville</title>
+  <title>Toiwo House Cafe</title>
   <!-- Bootstrap cdn -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <!-- Font Awesome -->
@@ -32,7 +32,7 @@
     <nav id="navbar" class="navbar card navbar-expand-lg navbar-light">
       <div class="container">
         <a class="navbar-brand" href="{{ url('http://localhost:8000') }}">
-          <h3 class="text-white">Shelterville</h3>
+          <h3 class="text-white">Toiwo House Cafe</h3>
         </a>
 
         <!-- Collapse Button -->
@@ -50,14 +50,20 @@
               <a class="nav-link text-white navhover" href="{{ url('http://localhost:8000') }}">Home</a>
             </li>
 
-             @foreach($categories as $category)
-            <li class="nav-item">
+             
+             <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Daftar Menu</a>
+                @foreach($categories as $category)
+                <div class="dropdown-menu">
+                <a class="dropdown-item" href="{{ route('category_food',['category_id'=>$category->category_id] ) }}">{{$category->category_name}}</a>
+                </div>
+                @endforeach
+              </li>
+
+            <!-- <li class="nav-item">
               <a class="nav-link text-white navhover" href="{{ route('category_food',['category_id'=>$category->category_id] ) }}">{{$category->category_name}}</a>
-            </li>
-            @endforeach
-
-
-
+            </li> -->
+          
             <li class="nav-item">
               <a class="nav-link text-white navhover" href="#about">Tentang Kami</a>
             </li>
